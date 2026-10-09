@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APIs e DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 640px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+    section {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+    .status {
+      color: #555;
+      min-height: 20px;
+    }
+    dt {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    dd {
+      margin-left: 0;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Consumo de APIs e DOM</h1>
+
+  <section>
+    <h2>Parte 1: Pedidos pagos</h2>
+    <ul id="lista-pedidos"></ul>
+    <p id="total-pedidos"></p>
+  </section>
+
+  <section>
+    <h2>Parte 2: Buscador de CEP</h2>
+    <form id="form-cep">
+      <input type="text" id="cep" placeholder="Digite o CEP (8 números)">
+      <button type="submit" id="btn-cep">Buscar</button>
+    </form>
+    <p id="status-cep" class="status"></p>
+    <dl id="resultado-cep"></dl>
+    <h3>Histórico</h3>
+    <ul id="historico-cep"></ul>
+  </section>
+
+  <section>
+    <h2>Parte 3: Mini Pokédex</h2>
+    <form id="form-pokemon">
+      <input type="text" id="pokemon" placeholder="Nome do Pokémon">
+      <button type="submit" id="btn-pokemon">Buscar</button>
+    </form>
+    <p id="status-pokemon" class="status"></p>
+    <div id="resultado-pokemon"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
